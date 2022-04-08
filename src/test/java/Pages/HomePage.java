@@ -42,7 +42,7 @@ public class HomePage extends BasePage {
     }
 
     public HomePage isOnHomePage(){
-        Assert.assertEquals(kategoriFieldInHomePage(),"TÜM KATEGORİLER","Anasayfada değilsiniz!");
+        Assert.assertEquals(kategoriFieldInHomePage(),"TÜM KATEGORİLER","Anasayfada değilsiniz! ");
         return this;
     }
 }
