@@ -1,5 +1,4 @@
 # n11-POM
-
 Test Case:
 1- n11.com'a git, cookie isteğini kapat.
 2- Anasayfa'da olup olmadığını kontrol et.
