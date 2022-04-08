@@ -10,7 +10,7 @@ import org.testng.Assert;
 import java.util.List;
 
 public class ProductPage extends BasePage {
-    protected By resultTextLocator = By.cssSelector(".resultText");
+    protected By resultTextLocator = By.cssSelector(".resultText h1");
     protected By urunLocator = By.cssSelector(".productName");
     protected By renkLocator = By.cssSelector("span[data-unif-seovalue='altin']");
     protected By quantityIncreaseLocator = By.cssSelector(".spinnerUp");
@@ -25,7 +25,7 @@ public class ProductPage extends BasePage {
 
     public ProductPage isOnProductSearchPage(){
         String e = wait.until(ExpectedConditions.visibilityOfElementLocated(resultTextLocator)).getText();
-        Assert.assertEquals(e,e,"Ürün arama sayfasında değilsiniz!");
+        Assert.assertEquals(e,"IPhone 13 Pro Max,","Ürün arama sayfasında değilsiniz!");
         return this;
     }
 
