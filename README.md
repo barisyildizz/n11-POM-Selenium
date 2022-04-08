@@ -1,4 +1,7 @@
 # n11-POM
+
+<ul>TestNG, POM ve Java kullanılarak yazılan N11 Selenium Otomasyonu</ul> 
+
 <ul>Test Case:</ul> 
 <ul>1- n11.com'a git, cookie isteğini kapat.</ul> 
 <ul>2- Anasayfa'da olup olmadığını kontrol et.</ul> 
