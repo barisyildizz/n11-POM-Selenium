@@ -13,7 +13,7 @@ public class HomePage extends BasePage {
     protected By cookieLocator = By.xpath("//div[@id='cookieUsagePopIn']//span[@class='closeBtn']");
     protected By searchFieldLocator = By.id("searchData");
     protected By searchButtonLocator = By.cssSelector(".icon.iconSearch");
-    protected By kategoriLocator = By.cssSelector(".catMenu");
+    protected By kategoriLocator = By.cssSelector(".allCatTitle");
 
     public HomePage(WebDriver webDriver) {
         super(webDriver);
@@ -36,14 +36,13 @@ public class HomePage extends BasePage {
         return new ProductPage(driver);
     }
 
-    public WebElement kategoriFieldInHomePage(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(kategoriLocator));
-        WebElement e = driver.findElement(kategoriLocator);
+    public String kategoriFieldInHomePage(){
+       String e =  wait.until(ExpectedConditions.visibilityOfElementLocated(kategoriLocator)).getText();
         return e;
     }
 
     public HomePage isOnHomePage(){
-        kategoriFieldInHomePage().isDisplayed();
+        Assert.assertEquals(kategoriFieldInHomePage(),"TÜM KATEGORİLER","Anasayfada değilsiniz!");
         return this;
     }
 }
